@@ -37,3 +37,6 @@ SHELL_WRITE_TEST.txt
 *.tmp
 tmp/
 temp/
+
+# Local editor configuration
+.cursor/

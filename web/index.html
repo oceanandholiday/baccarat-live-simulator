@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Baccarat Live Simulator</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to dashboard</a>
+  <header class="top">
+    <div>
+      <p class="eyebrow">Local display simulator</p>
+      <h1>Baccarat Live</h1>
+    </div>
+    <p id="connection" class="conn connecting" role="status">Connecting</p>
+  </header>
+
+  <main id="main">
+    <p id="banner" class="banner" hidden></p>
+    <p id="loading" class="loading">Loading simulator state…</p>
+
+    <section class="hero" aria-labelledby="result-label">
+      <p id="result-label" class="eyebrow">Latest result</p>
+      <p id="result" class="result waiting">Waiting</p>
+      <p id="result-meta" class="meta">No rounds yet.</p>
+      <p id="live" class="sr-only" aria-live="polite"></p>
+    </section>
+
+    <section class="stats" aria-label="All-time statistics">
+      <article class="stat">
+        <h2>Rounds</h2>
+        <p id="total">0</p>
+      </article>
+      <article class="stat player">
+        <h2>Player</h2>
+        <p id="player-count">0</p>
+        <span id="player-pct">0.0%</span>
+      </article>
+      <article class="stat banker">
+        <h2>Banker</h2>
+        <p id="banker-count">0</p>
+        <span id="banker-pct">0.0%</span>
+      </article>
+      <article class="stat tie">
+        <h2>Tie</h2>
+        <p id="tie-count">0</p>
+        <span id="tie-pct">0.0%</span>
+      </article>
+    </section>
+
+    <section class="controls" aria-label="Simulator controls">
+      <div class="buttons">
+        <button id="start" type="button">Start</button>
+        <button id="pause" type="button">Pause</button>
+        <button id="resume" type="button">Resume</button>
+        <button id="reset" type="button" class="danger">Reset</button>
+      </div>
+      <label class="speed">
+        Speed
+        <select id="speed">
+          <option value="500">0.5s</option>
+          <option value="1000">1s</option>
+          <option value="2000" selected>2s</option>
+          <option value="5000">5s</option>
+          <option value="10000">10s</option>
+        </select>
+      </label>
+      <p id="status" class="status-pill">Stopped</p>
+    </section>
+
+    <section class="panel" aria-labelledby="bead-label">
+      <div class="panel-head">
+        <h2 id="bead-label">Bead road</h2>
+        <p class="hint">Latest rounds, filled top to bottom. P player, B banker, T tie.</p>
+      </div>
+      <div id="bead" class="bead-road"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="history-label">
+      <div class="panel-head">
+        <h2 id="history-label">Round history</h2>
+        <p class="hint">Newest first. Totals above count every saved round.</p>
+      </div>
+      <ol id="history" class="history"></ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Simplified weighted random model. This is not a card-shoe Baccarat game, and it does not place wagers.</p>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+# Go build and test artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage.out
+coverage.html
+bin/
+dist/
+go.work
+go.work.sum
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# PostgreSQL local configuration and data
+pgdata/
+postgres-data/
+data/postgres/
+*.local.conf
+postgresql.local.conf
+pg_hba.local.conf
+*.pgpass
+
+# Logs
+*.log
+logs/
+
+# Temporary and security write-test files
+SECURITY_WRITE_TEST.txt
+SHELL_WRITE_TEST.txt
+*.tmp
+tmp/
+temp/
